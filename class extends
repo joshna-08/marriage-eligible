@@ -1,0 +1,23 @@
+class Credit{
+	int cardNo = 12345;
+	int pinNo = 67892;
+}
+class Hacker extends Credit
+{
+	void viewDetails()
+	{
+		System.out.println(cardNo);
+		System.out.println(pinNo);
+	}
+}
+public class Inheritance {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Hacker h = new Hacker();
+        h.viewDetails();
+	}
+		
+	}
+
+
