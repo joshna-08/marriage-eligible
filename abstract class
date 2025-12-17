@@ -1,0 +1,49 @@
+// Abstract class
+abstract class Calculator {
+    abstract void add();
+    abstract void sub();
+    abstract void mul();
+    abstract void div();
+}
+
+class MyCalculator extends Calculator {
+
+    void add() {
+        int number1 = 20;
+        int number2 = 30;
+        int result = number1 + number2;
+        System.out.println("Addition is : " + result);
+    }
+
+    void sub() {
+        int number1 = 20;
+        int number2 = 30;
+        int result = number1 - number2;
+        System.out.println("Subtraction is : " + result);
+    }
+
+    void mul() {
+        int number1 = 20;
+        int number2 = 30;
+        int result = number1 * number2;
+        System.out.println("Multiplication is : " + result);
+    }
+
+    void div() {
+        int number1 = 20;
+        int number2 = 30;
+        int result = number1 / number2;
+        System.out.println("Division is : " + result);
+    }
+}
+
+public class abstraction {
+    public static void main(String[] args) {
+
+        Calculator calc = new MyCalculator();
+        calc.add();
+        calc.sub();
+        calc.mul();
+        calc.div();
+    }
+}
