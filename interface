@@ -1,0 +1,29 @@
+// Interface
+interface Calculator {
+    void add();
+    void sub();
+}
+class MyCalculator implements Calculator {
+
+    public void add() {
+        int a = 20;
+        int b = 10;
+        int result = a + b;
+        System.out.println("Addition is: " + result);
+    }
+
+    public void sub() {
+        int a = 20;
+        int b = 10;
+        int result = a - b;
+        System.out.println("Subtraction is: " + result);
+    }
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+
+        Calculator calc = new MyCalculator();
+        calc.add();
+        calc.sub();
+    }
+}
