@@ -1,0 +1,50 @@
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+
+public class ExceptionHandlingDemo {
+
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age is not valid for voting");
+        } else {
+            System.out.println("Eligible for voting");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            int a = 10, b = 0;
+            int c = a / b;
+            System.out.println(c);
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception: Cannot divide by zero");
+        }
+
+        try {
+            int[] arr = {1, 2, 3};
+            System.out.println(arr[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out Of Bounds Exception");
+        }
+
+        try {
+            String s = "abc";
+            int num = Integer.parseInt(s);
+            System.out.println(num);
+        } catch (NumberFormatException e) {
+            System.out.println("Number Format Exception");
+        }
+
+        try {
+            checkAge(15);
+        } catch (InvalidAgeException e) {
+            System.out.println("User Defined Exception: " + e.getMessage());
+        }
+
+        System.out.println("Program executed successfully");
+    }
+}
